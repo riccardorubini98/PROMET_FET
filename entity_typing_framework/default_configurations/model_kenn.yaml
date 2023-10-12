@@ -1,0 +1,15 @@
+# same as model.yaml or model_adapters.yaml, except the following
+model:
+  ET_Network_params:
+    network_params:
+      input_projector_params:
+        name : KENNClassifier
+        clause_file_path: kb_path/kb_name # need to be specified if you want to use a custom kb
+        # if clause_file_path is not set, the following parameters are needed to generate a clause file path
+        learnable_clause_weight: True
+        clause_weight: 1.0
+        kb_mode: top_down
+        # the last layer before KENN has to avoid activation function since KENN assumes to have preactivations in input
+        layers_parameters: 
+          '1': # in this example there are two layers, the last layer has the name '1'
+            activation: none # important!
