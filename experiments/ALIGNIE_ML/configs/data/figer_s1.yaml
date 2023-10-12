@@ -1,0 +1,15 @@
+dataset_paths:
+  train: datasets/figer/5_shot/train_S1.json
+  dev: datasets/figer/5_shot/dev_S1.json
+  test: datasets/figer/test.json
+tokenizer_params:
+  name : ALIGNIEPromptTokenizedDataset
+  bertlike_model_name: roberta-base
+  max_mention_words: 50
+  max_right_words: 50
+  max_left_words: 50
+  max_tokens: 128
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: 
+  light: True

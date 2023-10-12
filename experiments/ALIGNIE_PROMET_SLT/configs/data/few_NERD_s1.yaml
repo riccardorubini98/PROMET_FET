@@ -1,0 +1,15 @@
+dataset_paths:
+  train: datasets/few_NERD/5-shot/train_S1.json
+  dev: datasets/few_NERD/5-shot/dev_S1.json
+  test: datasets/few_NERD/supervised_formatted/test.json
+tokenizer_params:
+  name : ALIGNIEPromptTokenizedDataset
+  bertlike_model_name: roberta-base
+  max_mention_words: 50
+  max_right_words: 50
+  max_left_words: 50
+  max_tokens: 128
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: 
+  light: True

@@ -1,0 +1,28 @@
+learning_rate: 5e-5
+lambda_scale: 1
+wd: 10
+loss_module_params:
+  name: BCELossModule
+  loss_params:
+    name: BCEWithLogitsLoss
+    pos_weight: "8"
+ET_Network_params:
+  name: PROMETNetwork
+  network_params:
+    encoder_params:
+      name: PROMETBERTEncoder
+      bertlike_model_name: roberta-base
+      embedding_dropout: "0.1"
+      activation_name: gelu
+    type_encoder_params:
+      name: OneHotTypeEncoder
+      trainable: False
+    input_projector_params:
+      name: Classifier
+      layers_parameters:
+        '0':
+          in_features: encoder_dim
+          out_features: type_number
+          use_dropout: False
+          activation: none
+    activation_name: relu

@@ -1,0 +1,21 @@
+truncation_side : 'left'
+dataset_reader_params:
+  name : BaseDataset
+dataset_params:
+  name: ET_Dataset
+dataloader_params:
+  name: torch.DataLoader
+  train:
+    batch_size: 8
+    shuffle: True
+    # shuffle: True
+    # num_workers: 16
+    # pin_memory: True
+  dev:
+    batch_size: 8
+    # num_workers: 16
+    # pin_memory: True
+  test:
+    batch_size: 8
+    # num_workers: 16
+    # pin_memory: True

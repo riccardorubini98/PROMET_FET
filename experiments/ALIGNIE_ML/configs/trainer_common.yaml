@@ -1,0 +1,4 @@
+# deterministic: True
+accelerator: gpu
+devices: auto
+max_epochs : 1000
