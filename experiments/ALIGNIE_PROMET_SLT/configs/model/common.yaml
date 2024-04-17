@@ -1,0 +1,7 @@
+smart_save: True
+metric_manager_name: ALIGNIEMetricManager
+inference_params: 
+    name: ALIGNIEInferenceManager
+    # name: MaxInference
+    # threshold: none
+avoid_sanity_logging: True

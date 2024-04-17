@@ -1,0 +1,23 @@
+learning_rate: 5e-3
+lambda_scale: 1e-3
+loss_module_params:
+  name : ALIGNIELossModule
+  main_loss : KLDivLossModule
+  loss_params :
+    name : KLDivLoss
+    reduction : batchmean
+  enable_hierarchic_losses : True
+  enable_verbalizer_losses : True
+ET_Network_params:
+  name : ALIGNIENetwork
+  network_params:
+    encoder_params:
+      name : MLMBERTEncoder
+      bertlike_model_name: roberta-base
+      freeze_encoder : False
+    type_encoder_params:
+      name : OneHotTypeEncoder
+      trainable: False
+    input_projector_params:
+      name : ALIGNIEProjector
+      # lambda_scale : 1e-7

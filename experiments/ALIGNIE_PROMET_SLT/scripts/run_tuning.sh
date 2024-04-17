@@ -1,0 +1,4 @@
+bash scripts/run_tuning_PROMET_lambda.sh
+bash scripts/run_tuning_ALIGNIE_lambda.sh
+bash scripts/run_tuning_PROMET_nolambda.sh
+bash scripts/run_tuning_ALIGNI_nolambda.sh

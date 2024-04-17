@@ -1,0 +1,5 @@
+smart_save: True
+metric_manager_name: ALIGNIEMetricManager
+inference_params: 
+    name: ThresholdOrMaxInference
+avoid_sanity_logging: True
